@@ -4,40 +4,24 @@ public:
         stack<int> st;
         for(int i=0;i<tokens.size();i++){
             if(tokens[i]=="+"){
-                     int t1 = st.top();
-                     st.pop();
-
-                     int t2 = st.top();
-                     st.pop();
-
-                     st.push(t2+t1);
+                    int t1 = st.pop();
+                    int t2 = st.top();
+                    st.push(t2+t1);
             }
             else if(tokens[i]=="-"){
-                     int t1 = st.top();
-                     st.pop();
-
-                     int t2 = st.top();
-                     st.pop();
-
-                     st.push(t2-t1);
+                    int t1 = st.pop();
+                    int t2 = st.top();
+                    st.push(t2-t1);
             }
             else if(tokens[i]=="*"){
-                     int t1 = st.top();
-                     st.pop();
-
-                     int t2 = st.top();
-                     st.pop();
-
-                     st.push(t2*t1);
+                    int t1 = st.pop();
+                    int t2 = st.top();
+                    st.push(t2*t1);
             }
             else if(tokens[i]=="/"){
-                     int t1 = st.top();
-                     st.pop();
-
-                     int t2 = st.top();
-                     st.pop();
-
-                     st.push(t2/t1);
+                    int t1 = st.pop();
+                    int t2 = st.top();
+                    st.push(t2/t1);
             }
             
 
